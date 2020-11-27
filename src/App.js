@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import './App.css'
+import CardList from './CardList';
+import SearchBox from './SearchBox'
+import { robots } from './robots';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [searchfield, setSearchfield] = useState('');
+
+    const onSearchChange = (event) => {
+        setSearchfield(event.target.value);
+    }
+
+ 
+    const filterRobots = robots.filter(user => {
+        return (user.name.toLowerCase().includes(searchfield.toLowerCase()) || user.email.toLowerCase().includes(searchfield.toLowerCase()) || user.phone.toLowerCase().includes(searchfield.toLowerCase()))
+    })
+
+    return(
+        <div>
+            <h1 className="title">RoboFriends</h1>
+            <br />
+            <div className="app">
+                <SearchBox searchChange={onSearchChange} className="search" />
+                <br />
+                <CardList robots={filterRobots} />
+            </div>
+        </div>
+    )
+
 }
 
 export default App;
