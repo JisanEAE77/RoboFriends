@@ -2,3 +2,4 @@
 .title {background-color: black; color: skyblue; text-align: center; padding: 20px 20px; font-size: 42px;}
 input {background-color: black; color: skyblue; border: none; outline: none; height: 65px; width: 360px; padding: 10px 30px; font-size: 24px; border-radius: 10px; text-align: center;}
 ::placeholder {color: skyblue; font-size: 24px;}
+.alert {color: red; font-size: 42px; text-align: center;}

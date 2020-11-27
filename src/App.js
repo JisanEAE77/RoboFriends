@@ -17,17 +17,40 @@ function App() {
         return (user.name.toLowerCase().includes(searchfield.toLowerCase()) || user.email.toLowerCase().includes(searchfield.toLowerCase()) || user.phone.toLowerCase().includes(searchfield.toLowerCase()))
     })
 
-    return(
-        <div>
-            <h1 className="title">RoboFriends</h1>
-            <br />
-            <div className="app">
-                <SearchBox searchChange={onSearchChange} className="search" />
+    if (filterRobots.length === 0) {
+        return (
+            <div>
+                <h1 className="title">RoboFriends</h1>
                 <br />
-                <CardList robots={filterRobots} />
+                <div className="app">
+                    <SearchBox searchChange={onSearchChange} className="search" />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <h1 className="alert">!.......No Match Found.......!</h1>
+                </div>
             </div>
-        </div>
-    )
+        )
+
+    } else {
+        return (
+            <div>
+                <h1 className="title">RoboFriends</h1>
+                <br />
+                <div className="app">
+                    <SearchBox searchChange={onSearchChange} className="search" />
+                    <br />
+                    <CardList robots={filterRobots} />
+                </div>
+            </div>
+        )
+    }
+
+    
 
 }
 
