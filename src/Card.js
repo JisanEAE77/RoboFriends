@@ -5,7 +5,7 @@ function Card({ name, email, phone }) {
     
         <div className="card">
             <h1 className="name">{name}</h1>
-            <img alt="Robots" src={`https://robohash.org/${name}?200*200`} />
+            <img alt="Robots" src={`https://robohash.org/${phone}?200*200`} />
             <br />
             <div className="details">
                 <h2>{email}</h2>
