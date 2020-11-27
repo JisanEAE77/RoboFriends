@@ -15,6 +15,11 @@ export const robots = [
         phone: "+8801849116907",
     },
     {
+        name: "Raihan",
+        email: "zushitt@gmail.com",
+        phone: "+8801711448568",
+    },
+    {
         name: "Sudipta",
         email: "sdptpddr@gmail.com",
         phone: "+8801998502617",
@@ -43,11 +48,6 @@ export const robots = [
         name: "Tonni",
         email: "tonnichowdhury2020@gmail.com",
         phone: "+8801635598540",
-    },
-    {
-        name: "Sazzad",
-        email: "sazzadador@gmail.com",
-        phone: "+8801705799384",
     },
     {
         name: "Wahid",
